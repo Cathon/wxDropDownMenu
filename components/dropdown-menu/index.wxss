@@ -1,0 +1,97 @@
+/* components/dropdown-menu/index.wxss */
+/*下拉组件：一级菜单中的样式*/
+.nav {
+  /* position: fixed; */
+  /* top: 0;  */
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #d1d3d4;
+  border-bottom: 1px solid #d1d3d4;
+  background: #fff;
+  height: 80rpx;
+}
+
+.nav-son {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+
+.left-borders {
+  border-left: 1px solid #e6e6e6;
+}
+
+.content {
+  display: inline-block;
+}
+
+.icon {
+  display: inline-block;
+  border: 10rpx solid transparent;
+  border-top: 10rpx solid #9b9b9b;
+  margin-left: 10rpx;
+}
+
+.nav-son.active .content {
+  color: #48c23d;
+}
+
+.nav-son.active .icon {
+  border: 10rpx solid transparent;
+  border-bottom: 10rpx solid #61beff;
+}
+
+/*下拉组件：子菜单中的样式*/
+.sub-menu {
+  position: fixed;
+  z-index: 4;
+  display: none;
+  width: 100%;
+  max-height: 300rpx;     /* max-height=3*line-height */
+  overflow-y: scroll;
+  padding: 0 0 0 20rpx;
+  line-height: 100rpx;
+  background: #fff;
+}
+
+.slidown {
+  display: block;
+  animation: slidown .2s ease-in both;
+}
+
+@keyframes slidown {
+  from {
+    transform: translateY(-100%);
+  } to {
+    transform: translateY(0%);
+  }
+}
+
+.disappear {
+  display: none;
+}
+
+.sub-menu view {
+  border-bottom: 1px solid #d1d3d4;
+  font-size: 28rpx;
+}
+
+.highlight {
+  color: #48c23d;
+}
+
+/*下拉组件：背景遮罩的样式*/
+.full-bg {
+  position: fixed;
+  /* top: 0; */
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgb(1, 1, 1);
+  transition: all .3s;
+  opacity: .5;
+}

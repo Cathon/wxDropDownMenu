@@ -1,0 +1,22 @@
+<!--components/dropdown-menu/index.wxml-->
+<view>
+  <!-- 一级菜单 -->
+  <view class="nav">
+    <view wx:for="{{dropDownMenuData}}" wx:key="item.title" bindtap="dropDown" data-nav="{{index}}" 
+      class="nav-son left-borders {{naviIndex == index ? 'active' : ''}}">
+      <view class="content">{{item.title}}</view>
+      <view class="icon"></view>
+    </view>
+  </view>
+  <!-- 子菜单 -->
+  <view wx:for="{{dropDownMenuData}}" wx:key="item.title" wx:for-index="titleIdx" 
+    class="sub-menu {{open[titleIdx] ? 'slidown' : 'disappear'}}">
+    <view wx:for="{{dropDownMenuData[naviIndex]['options']}}" wx:for-index="optionIdx" 
+      bindtap="subMenuTapped" wx:key="*this" class="{{highlight[titleIdx][optionIdx]}}" 
+      data-navi-index="{{naviIndex}}" data-option-index="{{optionIdx}}">
+      {{item}}
+    </view>
+  </view>
+  <!-- 背景遮罩 -->
+  <view class="{{isMasked ? 'full-bg' : ''}}" bindtap="hideBackground"></view>
+</view>

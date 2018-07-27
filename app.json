@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#48c23d",
+    "navigationBarTitleText": "下拉菜单",
+    "navigationBarTextStyle":"white"
+  }
+}

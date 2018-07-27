@@ -1,0 +1,6 @@
+<dropdown-menu dropDownMenuData="{{dropDownMenuData}}" bindselection="onMenuSelection" />
+<view>
+  <view wx:for="dropDownMenuDatadropDownMenuData">
+    {{item}}
+  </view>
+</view>

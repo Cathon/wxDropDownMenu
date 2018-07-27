@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "下拉菜单组件化",
+  "usingComponents": {
+    "dropdown-menu": "../../components/dropdown-menu/index"
+  }
+}
